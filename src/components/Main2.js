@@ -1,17 +1,14 @@
 
-import "./App.css"
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import useClipboard from "react-use-clipboard";
 import {useState} from "react";
 
 
-const App = () => {
+const Main2 = () => {
     const [textToCopy, setTextToCopy] = useState();
     const [isCopied, setCopied] = useClipboard(textToCopy, {
         successDuration:1000
     });
-
-   
 
     const startListening = () => SpeechRecognition.startListening({ continuous: true, language: 'en-IN' });
     const { transcript, browserSupportsSpeechRecognition } = useSpeechRecognition();
@@ -48,4 +45,4 @@ const App = () => {
     );
 };
 
-export default App;
+export default Main2;
