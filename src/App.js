@@ -23,10 +23,9 @@ const App = () => {
     return (
         <>
             <div className="container">
-                <h2>Speech to Text Converter</h2>
+                <h2>iVoice</h2>
                 <br/>
-                <p>A React hook that converts speech from the microphone to text and makes it available to your React
-                    components.</p>
+                <p>Convert your speech into text & use it for various purposes.</p>
 
                 <div className="main-content" onClick={() =>  setTextToCopy(transcript)}>
                     {transcript}
@@ -37,8 +36,8 @@ const App = () => {
                     <button onClick={setCopied}>
                         {isCopied ? 'Copied!' : 'Copy to clipboard'}
                     </button>
-                    <button onClick={startListening}>Start Listening</button>
-                    <button onClick={SpeechRecognition.stopListening}>Stop Listening</button>
+                    <button onClick={startListening}>Start</button>
+                    <button onClick={SpeechRecognition.stopListening}>Stop</button>
 
                 </div>
 
